@@ -1,0 +1,9 @@
+PRÁCTICA: LISTAS DOBLEMENTE ENLAZADAS
+Actividades registradas: 7/7
+concept, sim, predict, lab, r0, r1, r2
+
+Reflexión:
+Lo más difícil fue mantener la sincronización bidireccional de los enlaces al realizar inserciones o eliminaciones (especialmente al manejar casos extremos como cuando las referencias adyacentes son None o cuando el nodo actual es el primero o el último). Al principio, es fácil romper la continuidad de la lista al actualizar una referencia (como siguiente) antes de asegurar el enlace inverso (anterior), lo que deja nodos huérfanos o ciclos infinitos.
+Lo solucioné diseñando primero un diagrama de flujo mental y gráfico para definir el orden estricto de asignación: primero configurar los enlaces del nuevo nodo hacia sus vecinos, y luego actualizar los enlaces de los vecinos existentes hacia el nuevo nodo, validando siempre con condicionales (if) si el nodo adyacente existe antes de intentar acceder a sus propiedades.
+
+Nota: progreso autodeclarado, no prueba de ejecución Python.
